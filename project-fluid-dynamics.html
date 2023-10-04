@@ -28,18 +28,56 @@
     <div id="main">
 
         <header class="major">
-            <h2>3D Simulation of Fluid Dynamics</h2>
+            <h1>3D Simulation of Fluid Dynamics</h1>
         </header>
         <iframe width="100%" height="443" src="https://www.youtube.com/embed/NmIDs7hFvDs"
             title="3D Simulation of Fluid Dynamics" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         <br><br>
+        <h3>Project Objectives</h3>
         <p>This project aims to comprehensively investigate the impact of oil discharges through punctures on the
             surrounding environment. To achieve this, the study will initially track the distance traveled by oil from
             its puncture points. Subsequently, the accumulated oil puddles that form during the discharge will be
             identified. These specific locations of oil puddles will serve as critical reference points for analyzing
             the dispersion of fumes and their reach from the oil puddles, taking into account wind direction data.
+        </p>
+        <h3> Workflow </h3>
+        <p>
+            The initial simulation centers around a hypothetical oil rupture point, as the pipeline in question
+            is
+            still in the conceptual phase. No actual data files are available, aside from an official route map.
+            Consequently, the pipeline structure is manually constructed using 3D objects (pipes) sourced from
+            Sketchup. The primary purpose of this simulation is to visualize the trajectory of oil dispersion
+            following an abrupt puncture event.
+        <p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/Slide1.jpeg" alt="" /></span></div>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/Slide2.jpeg" alt="" /></span></div>
+        </p>
+        In contrast, the second simulation places emphasis on the movement of fumes originating from the oil
+        puddles identified in the first simulation. To accurately represent this phenomenon, the simulation
+        incorporates wind data, specifically, wind direction (South & South East) and speed. These
+        environmental
+        factors play a crucial role in determining the potential hazard range of fumes due to turbulent
+        mixing
+        and interactions with nearby objects. The visualization of fume movement is achieved through a
+        particle
+        system integrated into Unity3D. This second simulation is essential as it sheds light on the
+        significant
+        risk associated with pipeline punctures - the dispersion of hazardous fumes.
+        </p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/workflow.png" alt="" /></span></div>
+        <h3>Findings</h3>
+        <p>
+            The initial findings from this work indicate that oil flow tends to accumulate in troughs and corners, while
+            fumes travel approximately 1 kilometer southward. Furthermore, it suggests that adding an emergency valve
+            could help reduce the radius of the affected area in the event of a pipeline rupture. These findings hold
+            significant importance for the fields of 3D Geographic Information Science (GIScience) and 3D geovisual
+            analysis, as they demonstrate the capability to capture and simulate dynamic phenomena, enabling users to
+            actively engage with simulations and explore various scenarios. In practical applications, such simulations
+            can serve as valuable tools for raising awareness about pipeline damage risks, educating the public, and
+            testing different rupture scenarios to plan mitigation strategies that prioritize resident safety, protect
+            local habitats, and preserve biodiversity.
         </p>
         </section>
     </div>
