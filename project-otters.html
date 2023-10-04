@@ -1,0 +1,180 @@
+~
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Emma's GIS Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="https://www.linkedin.com/in/emma-trang-le/" class="image avatar"><img src="images/avatar.jpg"
+                    alt="Emma Le Profile Image" /></a>
+            <h1><strong>I am Emma Le</strong>, GIS Specialist<br />
+                BCIT & SFU<br />
+        </div>
+    </header>
+    <div id="main">
+
+        <header class="major">
+            <h1>Suitable Areas For Sea Otters on Vancouver Island</h1>
+        </header>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/otterSplash.jpg" alt="" /></span></div>
+
+        <br><br>
+        <h3>Abstract</h3>
+        <p>This paper's primary objective is to identify new, suitable habitats for the endangered sea otters. Our study
+            focused on Vancouver Island, utilizing both spatial and multi-criteria approaches. We employed a
+            comprehensive array of methods in this endeavor, including Reclass, Fuzzy, Weight, and Multi-criteria
+            Evaluation.
+            <br><br>
+            The Reclass operation enabled us to assign appropriate values to various variables, facilitating the
+            quantification of habitat suitability. The Fuzzy operation played a critical role in standardizing
+            continuous data, ensuring consistency and comparability. Through the Weight operation, we determined the
+            relative importance of these factors in relation to each other.
+            <br><br>
+            Multi-criteria evaluation, a powerful technique, allowed us to assess and consolidate multiple criteria
+            simultaneously. Through the integration of these methods, we produced a final map that identifies regions
+            meeting all the essential criteria for an ideal sea otter habitat.
+        </p>
+        <h3> Introduction </h3>
+        <p>
+            Despite being keystone species, sea otters are classified as a matter of special concern by the Committee on
+            the Status of Endangered Wildlife in Canada (COSEWIC). As of a population survey in 2004, British Columbia
+            is home to approximately 3,200 sea otters, primarily concentrated along the west coast of West Vancouver.
+            While this increase in numbers is promising, the population remains small and in a recovery stage, facing
+            persistent threats such as oil spills and human disturbances like illegal fishing and hunting.
+            <br><br>
+            The sea otter recovery program holds significant importance, as it seeks to establish a robust and
+            well-distributed sea otter population along the British Columbian coast, capable of withstanding
+            catastrophic threats such as oil spills. This proactive approach aims to reduce the risk of population
+            decline or extinction due to coastal constraints. To achieve this, sea otters require new and secure
+            habitats throughout the British Columbian coast. Previous surveys have primarily focused on assessing sea
+            otters' resilience to oil spill threats, with less attention given to identifying suitable recovery and
+            survival habitats.
+            <br><br>
+            Our approach involves considering various favorable factors and constraints to determine the most
+            appropriate areas for sea otter repopulation. Utilizing the Weight module in TerrSet, we assign weights to
+            favorable criteria and rank them based on their significance. The Weight Linear Combination within the
+            Multi-Criteria Module of TerrSet assesses the relative importance of these weighted criteria, resulting in a
+            comprehensive multi-criteria solution. This approach allows us to create a single evaluation index for
+            identifying suitable recovery areas for sea otters, taking into account multiple factors and their
+            respective weights.
+        <p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/ottersFig1.jpg" alt="" /></span></div>
+        <h4>Methods</h4>
+        <ul>
+            <li>Polygon to raster tool: converts shapefiles to raster data
+            </li>
+            <li>Reclass: Constraints (0 and 1 classes)
+            </li>
+            <li>Fuzzy: factors (a range from 0 to 1)
+            </li>
+            <li>Buffer: creates buffers of 4 km around constraints
+            </li>
+            <li>Weight module: Ranks factors (figure 2)</li>
+            <li>MCE module: generates suitable regions
+            </li>
+        </ul>
+        </p>
+        In this assessment, we assigned varying degrees of importance to three key factors. Food availability,
+        encompassing both fish stocks and kelp availability, received the highest weight, accounting for approximately
+        77% of the assessment. This emphasis reflects the critical role of food in sustaining and facilitating the
+        recovery of sea otter populations. Kelp, in particular, serves as a vital habitat for sea urchins and various
+        marine species that form a substantial part of the sea otter diet.
+        <br><br>
+        On the other hand, the factor of protected areas was allocated a weight of 23%. This allocation acknowledges the
+        importance of safeguarding sea otter habitats and providing the necessary protection for these vulnerable
+        creatures to thrive.
+        </p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/ottersFig2.jpg" alt="" /></span></div>
+        <p>
+            The data utilized in the analysis originally existed in vector format and needed to be transformed into
+            raster format for utilization. This rasterization process, however, resulted in a loss of spatial accuracy,
+            leading to potential errors in various aspects, including area, perimeter, shape, structure, position, and
+            attributes, given the numerous polygon features involved in the conversion. Furthermore, the initial raster
+            data did not share the same projection as the base map, necessitating a conversion to NAD 1983 BC
+            Environment Albers projection using the "Project" tool within ArcMap.
+        </p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/ottersFig3.jpg" alt="" /></span></div>
+        <p>
+
+            The MCE analysis comprehensively examines the interplay of various factors and constraints to pinpoint
+            optimal regions for implementing the sea otter population recovery program, with the overarching goal of
+            elevating the mammal's population beyond the threshold of 3,500 (as illustrated in Figure 3).
+        </p>
+        <div class="col-12"><span class="image fit"><img src="images/fulls/ottersFig4.jpg" alt="" /></span></div>
+        <p>
+            The western coast of Vancouver Island offers a more abundant expanse of suitable areas for sea otter
+            recovery, primarily attributed to the presence of richer fish stocks, thriving kelp communities, and a
+            greater number of protected zones along this side of the island. Our final suitability map reveals a
+            prevalence of moderately suitable areas in comparison to high-suitability zones, partly due to the proximity
+            of oil wells and the influence of tidal currents.
+            <br><br>
+            One notable exception is Bligh Island, which stands out as a highly suitable area, meeting all the essential
+            requirements for sea otters in terms of fish and kelp availability while remaining shielded from constraints
+            such as oil wells and tidal currents (as depicted in Figure 4).
+            <br><br>
+            It is worth acknowledging that the data processing involved in this analysis is intricate and can introduce
+            potential sources of error. Additionally, the Weighted Linear Combination MCE considered only two
+            constraints and three factors, whereas real-world decision-making in this context often involves a multitude
+            of factors and constraints. Moreover, the vector data used in the analysis originated from diverse sources,
+            making it challenging to assess the credibility of data quality across the board.
+        </p>
+        <h3>Conclusion</h3>
+        <p>
+            Sea otters, facing the threat of endangerment, urgently require a safe and nurturing environment to thrive.
+            The outcome of the MCE analysis has favored areas where three crucial factors are optimized while
+            constraints are minimized. As a result, the multifaceted solution from the MCE analysis will pinpoint
+            suitable and safeguarded regions for sea otters. These regions offer ample kelp and food resources while
+            providing protection against potential oil spill incidents and high tides.
+            <br><br>
+            Enhancing the data collection process by sourcing all data from a single, unified repository and ensuring
+            consistent projection could have substantially reduced potential errors. Moreover, a more comprehensive
+            consideration of additional on-ground factors and constraints would have yielded suitability areas that
+            better reflect real-world conditions. It's important to note that the relative weights assigned to each
+            factor were determined based on literature references and our best judgment. In practice, these weights
+            might vary, potentially leading to different outcomes in this analysis.</p>
+        </section>
+        <a href="./index.html" class="button">Return Home</a>
+    </div>
+    <section id="one">
+
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/emma-trang-le/" class="icon brands fa-linkedin"><span
+                                class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Emma Le 2023</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
