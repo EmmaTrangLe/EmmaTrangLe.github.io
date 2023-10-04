@@ -148,7 +148,6 @@
 
 					$this
 						.on('click', 'a', function(event) {
-
 							var $a = $(this),
 								href = $a.attr('href'),
 								target = $a.attr('target');
